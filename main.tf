@@ -1,12 +1,5 @@
 provider "aws" {
   region = "eu-central-1"
- default_tags {
-   tags = {
-     Environment = var.environment
-     Owner       = var.owner
-     Project     = var.project
-   }
- }  
 }
 
 data "aws_ami" "ubuntu" {
@@ -31,5 +24,8 @@ resource "aws_instance" "web" {
 
   tags = {
     Name = "${var.prefix}-HelloWorld"
+    Environment = var.environment
+    Owner       = var.owner
+    Project     = var.project    
   }
 }
