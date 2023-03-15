@@ -26,8 +26,8 @@ resource "aws_instance" "web" {
 
   tags = {
     Name = "${var.prefix}-HelloWorld"
- #   Environment = var.environment
- #   Owner       = var.owner
- #   Project     = var.project    
+    Environment = var.environment
+    Owner       = var.owner
+    Project     = var.project    
   }
 }
