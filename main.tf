@@ -20,8 +20,8 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.ubuntu.id
-#  instance_type = "t2.small"
-  instance_type = "t3.micro"
+ instance_type = "t2.small"
+ #instance_type = "t3.micro"
   
 
   tags = {
